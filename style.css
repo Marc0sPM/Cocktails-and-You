@@ -11,12 +11,6 @@ header{
 }
 h1{
     color: #fff;
-}
-.pollo{
-    color: black;
-    text-align: center;
-    background-color: aquamarine;
-    margin: 0px, 100px, 0px;
-    
-
+    font-family: 'MyFont';
+    src: url(CloisterBlack.ttf) format('truetype');
 }
