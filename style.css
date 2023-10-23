@@ -1,7 +1,7 @@
 /*Definicion de la fuente para titulos*/
 @font-face {
-    font-family: 'CloisterBlack';
-    src: url(CloisterBlack.ttf);
+    font-family: 'myFont';
+    src: url(KaushanScript-Regular.ttf);
 }
 /*--------------------*/
 
@@ -20,7 +20,7 @@ header{
 }
 h1{
     color: #fff;
-    font-family: CloisterBlack;
+    font-family: myFont;
     scale: 150%;
 }
 .logo{
@@ -49,12 +49,12 @@ nav button {
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: CloisterBlack;
+    font-family: myFont;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 nav button:hover {
-    background-color: #d2b48c;
+    background-color: #ac8f69;
     color: #f5f5dc;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -67,12 +67,23 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: myFont;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5a4d3b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 footer a {
-    text-decoration: none; 
+    text-align: center;
+    
 }
 footer img {
     width: 100px; 
+    margin-right: 10px;
+    box-shadow: 5px 5px 15px rgba(0 ,0 ,0,0.75);
 }
 
 
