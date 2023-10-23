@@ -17,14 +17,26 @@
         
     </header>
     <nav>
-        <button>Botón 1</button>
-        <button>Botón 2</button>
-        <button>Botón 3</button>
-        <button>Botón 4</button>
+        <button onclick="mostrarOcultar('descripcion')">DESCRIPCIÓN</button>
+        <button  onclick="mostrarOcultar('controles')">CONTROLES</button>
+        <button onclick="mostrarOcultar('empresa')">MÁS DE NOSOTROS</button>
     </nav>
+    <div id="descripcion" class="contenido">
+        <p>
+            Descripcion del juego
+        </p>
+    </div>
+    
+    <div id="controles" class="contenido" >
+        <p>Controles y objetivo</p>
+    </div>
+
+    <div id="empresa" class="contenido">
+        <p>Más de nosotros</p>
+    </div>
     <footer>
         <!-- cambiar el link a linktree ;P -->
-        <a href="https://www.instagram.com/nineandocorp/" target="_blank">
+        <a href="https://linktr.ee/nineandocorp" target="_blank">
             
             <img src="LogoNineandoCorp.jpg" alt="Enlace instagram">
         </a>    
