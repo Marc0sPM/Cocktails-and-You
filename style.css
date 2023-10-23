@@ -60,6 +60,7 @@ nav button:hover {
 }
 .contenido{
     display: none;
+    background-color: #d2b48c;
 }
 /*Decoracion footer*/ 
 footer{
