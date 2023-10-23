@@ -137,11 +137,18 @@ footer{
     justify-content: center;
     margin-top: 10px;
 }
-footer a{
-    text-align: center;
+footer a {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
+
 footer img {
     width: 100px; 
+   
+   
+}
+footer a:nth-child(2) img {
     margin-right: 10px;
     box-shadow: 5px 5px 15px rgba(0 ,0 ,0,0.75);
 }
