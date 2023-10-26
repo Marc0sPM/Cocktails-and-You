@@ -1,6 +1,6 @@
 const config = {
-    width: 1980,
-    height: 1080,
+    width: 800,
+    height: 600,
     parent: "container",
     type: Phaser.AUTO,
     scene: {
@@ -13,12 +13,15 @@ const config = {
 var game = new Phaser.Game(config);
 
 function preload(){
-    console.log("Esto es el preload");
+
+    this.load.image("player", "./assets/sprites/player.png");
 }
 
 function create(){
-    console.log("Esto es el create");
+
+    this.player = this.add.image(50, 50, "player");
+    this.player.setScale(2);
+    this.player.flipX = true;
 }
 function update(time, delta){
-    console.log(delta);
 }
