@@ -1,4 +1,3 @@
-
 function mostrarOcultar(parrafoId) {
     var parrafos = document.querySelectorAll('.contenido');
     parrafos.forEach(function(parrafo) {
