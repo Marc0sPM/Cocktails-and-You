@@ -4,7 +4,7 @@ class MainScene extends Phaser.Scene {
 
     constructor() {
       // Nombre de la escena para el SceneManager
-      super({ key: 'menu-principal' }); 
+      super({ key: 'MainScene' }); 
     }
   
     // Métodos init, preload, create, update
