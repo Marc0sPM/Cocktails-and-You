@@ -119,6 +119,12 @@ nav button:hover {
 .dentroContenido{
     display: flex;
 }
+
+.dentroContenido img{
+    width: 400px;
+    height: 400px;
+}
+
 /*Decoracion footer*/ 
 footer{
     background-color: #997f5e;
