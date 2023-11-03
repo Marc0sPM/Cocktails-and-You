@@ -14,7 +14,7 @@ class MainScene extends Phaser.Scene {
     preload(){
       console.log("Soy preload");
       this.load.image("background", "..\\assets\\sprites\\FondoTemporal.jpg");
-      this.load.image("player", "..\\assets\\sprites\\PersonajeMovPrueba.png");
+      this.load.image("player", "..\\assets\\sprites\\Player\\sprites-walk.png");
     }
     
     create(){
@@ -24,7 +24,7 @@ class MainScene extends Phaser.Scene {
       background.setScale(800 / background.width, 600 / background.height); // Ajusta la escala para que llene la pantalla
         player = this.add.image(100,100, "player");
 
-        player.setScale(0.1);
+        player.setScale(2);
 
         // this.anims.create({
         //   key: "walk",
