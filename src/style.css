@@ -106,6 +106,19 @@ nav button:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
     
 }
+.contenido h2{
+    text-align: center;
+    font-family: myFont;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+    
+}
+.contenido h3{
+    font-family: myFont;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+    
+}
 .contenido p{
     width: 60%;
     margin-left: 100px;
