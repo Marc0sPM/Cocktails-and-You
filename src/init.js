@@ -1,4 +1,4 @@
-console.log("Hola");
+
 
 class MainScene extends Phaser.Scene {
 
@@ -10,13 +10,13 @@ class MainScene extends Phaser.Scene {
     // Métodos init, preload, create, update
   
     preload(){
-
+      console.log("Soy preload");
         this.load.image("player", "./assets/sprites/player.png");
         //load.image("player", ".\assets\sprites\player.png")
     }
     
     create(){
-    
+      console.log("Soy create");
         this.player = this.add.image(100, 100, "player");
         this.player.setScale(2);
         this.player.flipX = true;
@@ -36,7 +36,7 @@ class MainScene extends Phaser.Scene {
   const config = {
     width: 800,
     height: 600,
-    canvas: "container",
+    parent: "container",
     type: Phaser.CANVAS,
     scene: MainScene
 }
