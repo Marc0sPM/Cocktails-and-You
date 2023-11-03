@@ -14,10 +14,9 @@ class MainScene extends Phaser.Scene {
     preload(){
       console.log("Soy preload");
       this.load.image("background", "..\\assets\\sprites\\FondoTemporal.jpg");
-      this.load.image("player", "..\\assets\\sprites\\Player\\sprites-walk.png");
-      // this.load.spritesheet('player',
-      //                 '..\\assets\\sprites\\Player\\sprites-walk.png',
-      //                 { frameWidth: 384/8, frameHeight: 48 });
+      this.load.spritesheet('player',
+                     '..\\assets\\sprites\\Player\\sprites-walk.png',
+                      { frameWidth: 384/8, frameHeight: 48 });
     }
     
     create(){
@@ -30,15 +29,13 @@ class MainScene extends Phaser.Scene {
         player.setScale(2);
         
 
-        // this.anims.create({
-        //   key: "walk",
-        //   frames: this.anims.generateFrameNumbers("player", { start: 0, end: 1 }), // Cambia estos números según tus frames
-        //   frameRate: 10, // Velocidad de la animación
-        //   repeat: -1 // -1 para bucle infinito
-        // });
-        
-        // // Inicia la animación
-        // player.play("walk");
+         this.anims.create({
+          key: "walk",
+          frames: this.anims.generateFrameNumbers("player", { start: 0, end: 7 }), // Cambia estos números según tus frames
+           frameRate: 10, // Velocidad de la animación
+           repeat: -1 // -1 para bucle infinito
+        });
+      
     }
     update(time, delta){
       const cursors = this.input.keyboard.createCursorKeys();
