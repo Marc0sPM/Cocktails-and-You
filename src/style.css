@@ -154,4 +154,14 @@ footer a:nth-child(2) img {
 }
 
 
+/*Centrar canvas phaser*/
+#container{
+    width: 800; 
+    height: 600px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 

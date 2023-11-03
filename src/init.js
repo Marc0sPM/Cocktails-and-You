@@ -11,24 +11,15 @@ class MainScene extends Phaser.Scene {
   
     preload(){
       console.log("Soy preload");
-        this.load.image("player", "./assets/sprites/player.png");
-        //load.image("player", ".\assets\sprites\player.png")
+        
     }
     
     create(){
       console.log("Soy create");
-        this.player = this.add.image(100, 100, "player");
-        this.player.setScale(2);
-        this.player.flipX = true;
-        this.player.setAngle(45);
-        //this.player.setOrigin(0,1);
-    
-        //game.physics.startSystem(Phaser.Physics.ARCADE);
-        //game.physics.arcade.enable(this.player);
+        
     }
     update(time, delta){
-        this.player.angle++;
-        this.player.x++;
+
     }
 
   }
@@ -37,7 +28,7 @@ class MainScene extends Phaser.Scene {
     width: 800,
     height: 600,
     parent: "container",
-    type: Phaser.CANVAS,
+    type: Phaser.AUTO,
     scene: MainScene
 }
 
