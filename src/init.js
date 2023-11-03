@@ -1,9 +1,9 @@
+//import Player from "./Player.js";
 
 let player;
 let background;
 
 class MainScene extends Phaser.Scene {
-
     constructor() {
       // Nombre de la escena para el SceneManager
       super({ key: 'MainScene' }); 
@@ -24,10 +24,12 @@ class MainScene extends Phaser.Scene {
       background = this.add.image(0,0, "background")
       background.setOrigin(0, 0); // Ajusta el origen de la imagen a la esquina superior izquierda
       background.setScale(800 / background.width, 600 / background.height); // Ajusta la escala para que llene la pantalla
-        player = this.add.image(100,100, "player");
 
-        player.setScale(2);
-        
+      
+      // player = new Player(this, 100, 100, "player");   //Constructora del player (HAY QUE VERLO)
+      player = this.add.image(100,100, "player");
+      player.setScale(2);
+
 
          this.anims.create({
           key: "walk",
