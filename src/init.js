@@ -15,6 +15,9 @@ class MainScene extends Phaser.Scene {
       console.log("Soy preload");
       this.load.image("background", "..\\assets\\sprites\\FondoTemporal.jpg");
       this.load.image("player", "..\\assets\\sprites\\Player\\sprites-walk.png");
+      // this.load.spritesheet('player',
+      //                 '..\\assets\\sprites\\Player\\sprites-walk.png',
+      //                 { frameWidth: 384/8, frameHeight: 48 });
     }
     
     create(){
@@ -25,6 +28,7 @@ class MainScene extends Phaser.Scene {
         player = this.add.image(100,100, "player");
 
         player.setScale(2);
+        
 
         // this.anims.create({
         //   key: "walk",
