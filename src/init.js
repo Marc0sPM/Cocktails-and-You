@@ -2,6 +2,9 @@
 
 let player;
 let background;
+let cursor;
+let pointer; 
+
 
 class MainScene extends Phaser.Scene {
     constructor() {
@@ -10,7 +13,11 @@ class MainScene extends Phaser.Scene {
     }
   
     // Métodos init, preload, create, update
-  
+    init(){
+      this.input.on('pointerdown', pointer => {
+        this.input.mouse.requestPointerLock();
+      }, this);
+   }
     preload(){
       console.log("Soy preload");
       this.load.image("background", "..\\assets\\sprites\\FondoTemporal.jpg");
@@ -21,6 +28,9 @@ class MainScene extends Phaser.Scene {
       this.load.spritesheet('player_stay', 
                       '..\\assets\\sprites\\Player\\sprites-idle.png',
                        {frameWidth: 192/4, frameHeight: 48});
+      this.load.image('cursor',
+      '..\\assets\\cursor.png',
+      {frameWidth: 400,frameHeight: 400});
     }
     
     create(){
@@ -28,12 +38,14 @@ class MainScene extends Phaser.Scene {
       background = this.add.image(0,0, "background")
       background.setOrigin(0, 0); // Ajusta el origen de la imagen a la esquina superior izquierda
       background.setScale(800 / background.width, 600 / background.height); // Ajusta la escala para que llene la pantalla
-
+      
       
       // player = new Player(this, 100, 100, "player");   //Constructora del player (HAY QUE VERLO)
       player = this.add.sprite(100,100, "player");
       player.setScale(2);
-
+      
+      cursor = this.add.image(100, 100, "cursor");
+      cursor.setScale(0.2);
 
          this.anims.create({
           key: "walk",
@@ -54,6 +66,12 @@ class MainScene extends Phaser.Scene {
     }
     update(time, delta){
       const cursors = this.input.keyboard.createCursorKeys();
+      pointer = this.input.activePointer;
+      // cursor.x = pointerwoldX;
+      // cursor.y = pointerwoldY;
+      // console.log("Coordenada X", pointer.worldX);
+      // console.log("Coordenada Y", pointer.worldY);
+      // console.log("Está pulsado:", pointer.isDown);
       const noInput = !cursors.up.isDown && !cursors.down.isDown && !cursors.left.isDown && !cursors.right.isDown;
       // Mover hacia arriba
   if (cursors.up.isDown) {
@@ -82,6 +100,8 @@ class MainScene extends Phaser.Scene {
    }
     }
 
+
+    
   }
 
   const config = {
