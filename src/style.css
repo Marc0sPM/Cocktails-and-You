@@ -1,7 +1,7 @@
 /*Definicion de la fuente para titulos*/
 @font-face {
     font-family: 'myFont';
-    /*src: url(assets/webFonts/KaushanScript-Regular.ttf);*/
+    src: url(/assets/webFonts/KaushanScript-Regular.ttf);
 }
 /*--------------------*/
 
@@ -121,21 +121,48 @@ nav button:hover {
 }
 .contenido p{
     width: 60%;
-    margin-left: 100px;
+    
 }
 .contenido img{
-    /* La img se tendra que poner bien y ajustar cuando se tenga el texto*/
-    margin-right: 20px;
     width: 200px;
     height: 100px;
 }
-.dentroContenido{
+.dentroControles{
+    text-align: center;
+    margin-right: 30px;
+    margin-left:30px;
+}
+.dentroControles p{
+   
+   width: 100%;
+   background-color: #f5f5dc;
+  
+   border-radius: 5px;
+   border: none;
+   margin-top:15px;
+  
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.dentroControles nav {
     display: flex;
+    justify-content: center;
+    background-color:#997f5e;
+    border:none;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.dentroDescripcion p{
+    display: flex;
+    margin-left: 100px;
+}
+.minijuegos{
+    display:none;
 }
 
-.dentroContenido img{
-    width: 400px;
-    height: 400px;
+.dentroControles img{
+    width: 300px;
+    height: 200px;
 }
 
 /*Decoracion footer*/ 
